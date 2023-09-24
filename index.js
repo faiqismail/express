@@ -3,7 +3,9 @@ const app = express() // membuat variable baru dengan nama app yang isinya varia
 const port = 3000 // membuat variable dengan nama port yang isinya 3000 port ini yang akan kita gunakan untuk menjalankan express
 
 
-
+const bodyPs = require('body-parser'); //import body-parser
+app.use(bodyPs.urlencoded({ extended: false}));
+app.use(bodyPs.json());
 
 
 const mhsRouter = require('./routes/mahasiswa');
